@@ -1,0 +1,11 @@
+[33mcommit cf53d3d03793757e37cf71a3049090fa4a1aedf2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: João Paulo Oliveira <joaolhplira@gmail.com>
+Date:   Tue Mar 8 09:18:41 2022 -0300
+
+    Components react
+
+[33mcommit 2cdb6288c3f8a558ccad692f832caedf5166689f[m
+Author: João Paulo Oliveira <joaolhplira@gmail.com>
+Date:   Mon Mar 7 09:16:55 2022 -0300
+
+    Initialize project using Create React App
