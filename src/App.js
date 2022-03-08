@@ -4,12 +4,22 @@ import { RegisterForm } from './components/RegisterForm/RegisterForm';
 import "./assets/App.css";
 
 class App extends Component {
-  state = {}
+
+  constructor() {
+    super()
+    this.notes = [];
+  }
+  
+  createNote(title, text) {
+    const newNote = {title, text}
+    this.notes.push(newNote)
+  }
+
   render() {
     return (
       <section className='content'>
-        <RegisterForm />
-        <NoteList />
+        <RegisterForm createNote={this.createNote.bind(this)}/>
+        <NoteList notes={this.notes}/>
       </section>
     );
   }
