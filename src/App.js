@@ -9,7 +9,8 @@ class App extends Component {
   constructor() {
     super()
     this.state = {
-      notes: []
+      notes: [],
+      categories: []
     }
   }
   
@@ -29,12 +30,22 @@ class App extends Component {
     })
   }
 
+  createCategory(title) {
+    const category = title
+    const newCategoriesArray = [...this.state.categories, category]
+    this.setState({
+      categories: newCategoriesArray
+    })
+
+    console.log(...this.state.categories)
+  }
+
   render() {
     return (
       <section className='content'>
         <RegisterForm createNote={this.createNote.bind(this)}/>
         <main className='content-main'>
-          <CategoryList />
+          <CategoryList categories={this.state.categories} createCategory={this.createCategory.bind(this)}/>
           <NoteList notes={this.state.notes} removeNote={this.removeNote.bind(this)}/>
         </main>
       </section>
